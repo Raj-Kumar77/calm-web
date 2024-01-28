@@ -16,7 +16,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        `http://localhost:5000/api/user/login`,
+        `https://calm-web-backend.vercel.app/api/user/login`,
         { email, password }
       );
       if (data) {

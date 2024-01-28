@@ -13,11 +13,14 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post(`http://localhost:5000/api/user/register`, {
-        name,
-        email,
-        password,
-      });
+      const { data } = await axios.post(
+        `https://calm-web-backend.vercel.app/api/user/register`,
+        {
+          name,
+          email,
+          password,
+        }
+      );
       if (data) {
         toast.success("Registration Successfully");
         navigate("/sign-in");
